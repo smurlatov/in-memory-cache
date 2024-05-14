@@ -67,7 +67,6 @@ func (c *Cache) Get(key string) (any, error) {
 			return nil, err
 		}
 
-		item.expiredAt = time.Now().Add(c.ttl) // reset TTL
 		return value, nil
 	}
 
